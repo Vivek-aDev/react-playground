@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cropper {
+  position: relative;
+  width: 80vw;
+  height: 90vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+input[type='radio']{
+  accent-color: #1895B0;
+}
+
+.btn{
+  font-size: 1rem;
+}
