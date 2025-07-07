@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../api/fetchProducts";
+import { addToCart } from "../features/cart/cartSlice";
 
 const ProductList = () => {
   const dispatch = useDispatch();
@@ -34,7 +35,6 @@ const ProductList = () => {
             boxShadow: "0 2px 5px rgba(0,0,0,0.1)",
             transition: "transform 0.2s",
             cursor: "pointer",
-            backgroundColor: "#f9f9f9",
             ":hover": {
               transform: "scale(1.05)",
             },
@@ -49,7 +49,7 @@ const ProductList = () => {
           <img src={product.image} alt={product.title} height={100} />
           <h4>{product.title.slice(0, 30)}...</h4>
           <p>${product.price}</p>
-          <button onClick={() => dispatch()}>Add to cart 🛒</button>
+          <button onClick={() => dispatch(addToCart(product))}>Add to cart 🛒</button>
         </li>
       ))}
     </div>
